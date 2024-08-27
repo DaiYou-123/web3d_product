@@ -96,7 +96,7 @@
   
   
     // // 创建星空的背景
-    let url = "../../public/model-Website/25s.jpg";
+    let url = "../../model-Website/25s.jpg";
     let envTexture = new THREE.TextureLoader(loadingManager).load(url,function(Texture){
       Texture.mapping = THREE.EquirectangularReflectionMapping;
       scene.background = Texture; // 设置背景
@@ -117,7 +117,7 @@
   
      // 设置解压缩的加载器 使用 DRACOLoader 和 GLTFLoader 来加载和解码压缩的 GLTF 模型文件
     let dracoLoader = new DRACOLoader(); // 新建加载器
-    dracoLoader.setDecoderPath("../../public/draco/gltf/");
+    dracoLoader.setDecoderPath("../../draco/gltf/");
     dracoLoader.setDecoderConfig({ type: "js" }); //使用 JavaScript 版本的 Draco 解码器
     dracoLoader.preload(); // 预加载解码器
     let loader = new GLTFLoader(loadingManager); // 解压加载器
@@ -126,7 +126,7 @@
     const percentDiv = document.getElementById("per");// 获取进度条元素
   
     // 加载模型一
-    loader.load("../../public/model-Website/xz.glb", (gltf) => {
+    loader.load("../../model-Website/xz.glb", (gltf) => {
       gltf.scene.scale.set(0.2, 0.2, 0.2); // 模型缩小10倍
       gltf.scene.position.set(1, 0, 0); // x-> 移动米
       scene.add(gltf.scene);
@@ -146,7 +146,7 @@
     })
   
     // 加载模型二
-    loader.load("../../public/model-Website/xq6.glb", (gltf) => {
+    loader.load("../../model-Website/xq6.glb", (gltf) => {
       gltf.scene.scale.set(0.1, 0.1, 0.1); // 模型缩小10倍
       gltf.scene.position.set(1, -8, 0); // x-> 移动1 y->-8 
       scene.add(gltf.scene);
@@ -176,7 +176,7 @@
     })
   
     // 加载模型三
-    loader.load("../../public/model-Website/gr75.glb", (gltf) => {
+    loader.load("../../model-Website/gr75.glb", (gltf) => {
       gltf.scene.scale.set(1.5, 1.5, 1.5); // 
       gltf.scene.position.set(1, -16, 0); // 
       scene.add(gltf.scene);
@@ -228,7 +228,7 @@
     });
   
     // 导入星球模型
-    loader.load("../../public/model-Website/moon.glb",(gltf)=>{
+    loader.load("../../model-Website/moon.glb",(gltf)=>{
       let moon = gltf.scene.children[0];
       for (let j = 0; j < 10; j++) {
           // 在场景中高效地渲染大量相同的几何体和材质

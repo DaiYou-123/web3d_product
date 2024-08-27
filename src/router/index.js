@@ -5,6 +5,7 @@ const HomeView = () => import("../views/index.vue");
 const Website = () => import("../views/vue_Website.vue");
 const MacRoom = () => import("../views/vue_macRoom.vue");
 const GS3D = () => import("../views/vue_3DGS.vue");
+const Train = () => import("../views/train.vue");
 
 
 const router = createRouter({
@@ -52,6 +53,14 @@ const router = createRouter({
       component: GS3D,
       meta: {
         title: '3D高斯'
+      }
+    },
+    {
+      path: '/train',
+      name: 'Train',
+      component: Train,
+      meta: {
+        title: '火车'
       }
     },
 

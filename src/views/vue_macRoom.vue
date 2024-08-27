@@ -181,7 +181,7 @@ const gltfLoader = new GLTFLoader()
 const machinePart = []
 let rejectPart = ['door-001', 'door-002', 'floor01', 'floor02', 'wall-f', 'wall-l', 'wall-t']
 let addModel = () => {
-    gltfLoader.load('../../public/MachineRoom/machineRoom.gltf', (gltf) => {
+    gltfLoader.load('../../MachineRoom/machineRoom.gltf', (gltf) => {
         const machine = gltf.scene
 
         machine.traverse(child => {

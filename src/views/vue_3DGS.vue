@@ -89,13 +89,15 @@ other
 <script setup>
 //  import { RouterLink, RouterView } from 'vue-router'
 
-const script = document.createElement('script');
-    script.src = '../../src/assets/js/main.js';
-    script.async = true;
-    document.body.appendChild(script);
+import myfunction from "../assets/js/main.js";
+// const script = document.createElement('script');
+//     script.src = '../src/assets/js/main.js';
+//     script.async = true;
+//     document.body.appendChild(script);
 
-    if(location.host.includes('hf.space')) document.body.classList.add('nohf');
+//     if(location.host.includes('hf.space')) document.body.classList.add('nohf');
   
+myfunction();
 </script>
 
 <style scoped>

@@ -736,26 +736,26 @@ let defaultViewMatrix = [
     0.03, 6.55, 1,
 ];
 let viewMatrix = defaultViewMatrix;
-async function main() {
+export default async function main() {
     let carousel = true;
     const params = new URLSearchParams(location.search);
     try {
         viewMatrix = JSON.parse(decodeURIComponent(location.hash.slice(1)));
         carousel = false;
     } catch (err) {}
-    const url = new URL(
-        // "nike.splat",
-        // location.href,
-        params.get("url") || "nike.splat",
-        "https://huggingface.co/cakewalk/splat-data/resolve/main/",
-    );
-    console.log("这是那个模型的网址吗-----",url);
+    // const url = new URL(
+    //     // "nike.splat",
+    //     // location.href,
+    //     params.get("url") || "nike.splat",
+    //     "https://huggingface.co/cakewalk/splat-data/resolve/main/",
+    // );
+    // console.log("这是那个模型的网址吗-----",url);
     // const req = await fetch(url, {
     //     mode: "cors", // no-cors, *cors, same-origin
     //     credentials: "omit", // include, *same-origin, omit
     // });
 
-    const req = await fetch("../../src/assets/js/nike.splat");
+    const req = await fetch("../../GS/nike.splat");
     console.log("这是那个模型吗-----",req);
     // let dataceshi = new Uint8Array("3DGS.splat");
     // console.log("这是我们的模型---",dataceshi);

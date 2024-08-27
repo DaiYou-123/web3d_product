@@ -49,33 +49,28 @@
                             <!-- <h3>12133145 <br><span>134256</span></h3> -->
                             <h3>利用3D高斯成像技术，导入网页进行可视化交互 <br></h3>
                             <p><br>
-                                3D高斯成像技术利用高斯分布来描述数据的集中趋势和分布特性
+                                3D Gaussian Splatting 成像技术利用若干2D图片生成3D场景
+                            <br> <br> <hr> <br>
+                            使得物体的细节还原度非常高，拥有更加真实的交互性，用户通过网页获得更沉浸式的体验，
+                            </p>
+                        </div>
+                    </div>
+                </RouterLink>
+                <RouterLink to="/train" target="_blank">
+                    <div class="card">
+                        <div class="imgBx" :style="{ '--img': `url(${imagePath4})` }"></div>
+                        <div class="content">
+                            <!-- <h3>12133145 <br><span>134256</span></h3> -->
+                            <h3>不依赖图片或视频--全方位的展现物体 <br></h3>
+                            <p><br>
+                                向3D场景/物体的实际展现，表现高于其他图片或视频带来的效果
                             <br> <br> <hr> <br>
                                 使得三维图像拥有更加真实的交互性，用户通过网页获得更沉浸式的体验
                             </p>
                         </div>
                     </div>
                 </RouterLink>
-                <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
-                </div>
-                <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
-                </div>
-                <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
-                </div>
-                <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
-                </div>
-                <div class="card">
-                    <div class="imgBx"></div>
-                    <div class="content"></div>
-                </div>
+             
             </div>
         </div>
     </div>
@@ -88,6 +83,7 @@ import { RouterLink } from "vue-router";
 const imagePath1 = new URL('../assets/images/website.png', import.meta.url).href;
 const imagePath2 = new URL('../assets/images/macRoom.png', import.meta.url).href;
 const imagePath3 = new URL('../assets/images/nike.png', import.meta.url).href;
+const imagePath4 = new URL('../assets/images/train.png', import.meta.url).href;
 
 </script>
 
